@@ -1,0 +1,181 @@
+#Spectator Settings Addon for MBedwars by dejwideek
+
+#Permissions
+permissions:
+  reload: "bw.spectsettings.reload"
+
+#Messages
+#RGB colors are supported. (1.16+ only)
+messages:
+  #Available placeholder: %permission%
+  no-permission: "&cYou must have permission &4%permission% &cto do this!"
+
+  reloaded: "&eSuccessfully reloaded configuration file!"
+
+  selected:
+    no-speed: "&cDisabled Speed effect!"
+
+    #Available placeholder: %speed%
+    speed: "&eSelected &c%speed%"
+  night-vision:
+    enabled: "&eEnabled Night Vision effect!"
+    disabled: "&cDisabled Night Vision effect!"
+
+#Menu
+menu:
+  #Menu title
+  title: "&8Spectator Settings"
+
+  #Menu size (1-54)
+  #1 row = 9
+  #2 rows = 18
+  #3 rows = 27
+  #4 rows = 36
+  #5 rows = 45
+  #6 rows = 54
+  size: 27
+
+  #When player has selected specified speed effect or has enabled night vision effect
+  active-effect-item-enchant: true
+
+  #This option fill empty slots in menu
+  fill-empty-slots:
+    enabled: true
+    material: black_stained_glass_pane
+    material-data: 15
+
+  #Items
+  #RGB colors are supported. (1.16+ only)
+  items:
+    no-speed:
+      enabled: true
+      material: leather_boots
+      material-data: 0
+      amount: 1
+      #Item slot (starts from 0)
+      slot: 10
+      display-name: "&aNo Speed"
+      lore:
+        select:
+          - ""
+          - "&eClick to select!"
+        selected:
+          - ""
+          - "&aSelected"
+    night-vision:
+      enabled: true
+      material: ender_eye
+      material-data: 0
+      amount: 1
+      #Item slot (starts from 0)
+      slot: 16
+      display-name: "&bNight Vision"
+      lore:
+        enable:
+          - ""
+          - "&eClick to enable!"
+        disable:
+          - ""
+          - "&eClick to disable!"
+      permission: bw.spectsettings.nightvision
+    speed:
+      speed1:
+        enabled: true
+        material: chainmail_boots
+        material-data: 0
+        amount: 1
+        walk-speed: 0.3
+        fly-speed: 0.2
+        #Item slot (starts from 0)
+        slot: 11
+        display-name: "&aSpeed I"
+        lore:
+          select:
+             - ""
+             - "&eClick to select!"
+          selected:
+             - ""
+             - "&aSelected"
+        permission: bw.spectsettings.speed1
+        message-placeholder: "Speed I"
+
+      speed2:
+        enabled: true
+        material: iron_boots
+        material-data: 0
+        amount: 2
+        walk-speed: 0.4
+        fly-speed: 0.3
+        #Item slot (starts from 0)
+        slot: 12
+        display-name: "&aSpeed II"
+        lore:
+          select:
+            - ""
+            - "&eClick to select!"
+          selected:
+            - ""
+            - "&aSelected"
+        permission: bw.spectsettings.speed2
+        message-placeholder: "Speed II"
+
+      speed3:
+        enabled: true
+        material: golden_boots
+        material-data: 0
+        amount: 3
+        walk-speed: 0.5
+        fly-speed: 0.4
+        #Item slot (starts from 0)
+        slot: 13
+        display-name: "&aSpeed III"
+        lore:
+          select:
+            - ""
+            - "&eClick to select!"
+          selected:
+            - ""
+            - "&aSelected"
+        permission: bw.spectsettings.speed3
+        message-placeholder: "Speed III"
+
+      speed4:
+        enabled: true
+        material: diamond_boots
+        material-data: 0
+        amount: 4
+        walk-speed: 0.6
+        fly-speed: 0.5
+        #Item slot (starts from 0)
+        slot: 14
+        display-name: "&aSpeed IV"
+        lore:
+          select:
+            - ""
+            - "&eClick to select!"
+          selected:
+            - ""
+            - "&aSelected"
+        permission: bw.spectsettings.speed4
+        message-placeholder: "Speed IV"
+
+    #You can add more items for speed with this section
+    #Just remove [] and paste this template below:
+    #  custom-speed:
+    #    material: arrow
+    #    material-data: 0
+    #    amount: 5
+    #    walk-speed: 0.7
+    #    fly-speed: 0.6
+    #    slot: 15
+    #    display-name: "&6Custom Speed"
+    #    lore:
+    #      select:
+    #        - ""
+    #        - "&eClick to select!"
+    #      selected:
+    #        - ""
+    #        - "&aSelected"
+    #    permission: bw.spectsettings.customspeed
+    #    message-placeholder: "Custom Speed"
+    additional-speed: []
