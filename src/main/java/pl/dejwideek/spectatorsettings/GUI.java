@@ -230,8 +230,6 @@ public class GUI extends ChestGUI {
             }
         } catch (Exception e) {}
 
-        player.openInventory(gui);
-
         if(isFillEmptySlots) {
             String itemMaterial = config.getString(
                             "menu.fill-empty-slots.material")
@@ -259,5 +257,7 @@ public class GUI extends ChestGUI {
                     gui.setItem(i, item);
             }
         }
+
+        player.openInventory(gui);
     }
 }
